@@ -7,15 +7,14 @@ class TodoApp extends Component {
       this.state = { items: [], text: '' };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    componentDidMount(){
-      
       var map = new window.naver.maps.Map('map', {
         center: new window.naver.maps.LatLng(37.48,126.88),
         zoom: 10
       });
       console.log(map.getBounds());
+    }
+  
+    componentDidMount() {
       fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(json => console.log(json))
