@@ -4,21 +4,11 @@ import TodoList from './todoList'
 class TodoApp extends Component {
     constructor(props) {
       super(props);
-      this.state = { items: [], text: '' };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
-      var map = new window.naver.maps.Map('map', {
-        center: new window.naver.maps.LatLng(37.48,126.88),
-        zoom: 10
-      });
-      console.log(map.getBounds());
+      this.state = { items: [], text: ''};
     }
-  
-    componentDidMount() {
-      fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => console.log(json))
-    }
+
     render() {
       return (
         <div>
