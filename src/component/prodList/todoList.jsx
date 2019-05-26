@@ -5,7 +5,7 @@ class TodoList extends Component {
       return (
         <ul>
           {this.props.items.map(item => (
-            <li key={item.id}>{item.text}</li>
+            <div key={item.id}>{item.text}</div>
           ))}
         </ul>
       );

@@ -23,6 +23,16 @@
   color: #61dafb;
 }
 
+.AppLayer1 {
+  text-align: center;
+  float: left;
+}
+
+.MainApp {
+  width:100%;
+  height:85%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

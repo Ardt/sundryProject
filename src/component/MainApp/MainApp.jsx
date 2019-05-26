@@ -4,12 +4,12 @@ import Nmap from '../Nmap/Nmap';
 
 class MainApp extends Component {
     state = {  }
-    
+
     render() {
         return (
-            <div>
-            
-                <Nmap />
+            <div class="MainApp">
+                <Nmap class="AppLayer1"/>
+                <TodoApp class="AppLayer1"/>
             </div>
         );
     }

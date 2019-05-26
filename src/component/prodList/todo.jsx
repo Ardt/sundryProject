@@ -13,14 +13,8 @@ class TodoApp extends Component {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input
-              id="new-todo"
-              onChange={this.handleChange}
-              value={this.state.text}
-            />
-            <button>
-              Add #{this.state.items.length + 1}
-            </button>
+            <input id="new-todo" onChange={this.handleChange} value={this.state.text} />
+            <button> Add #{this.state.items.length + 1} </button>
           </form>
           <TodoList items={this.state.items} />
         </div>
@@ -37,7 +31,7 @@ class TodoApp extends Component {
         return;
       }
       const newItem = {
-        text: this.state.text,
+        text: Date.now() + this.state.text,
         id: Date.now()
       };
       this.setState(state => ({
